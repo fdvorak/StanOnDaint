@@ -16,12 +16,14 @@ Before we can start fitting the models, we have to set up the R environment in J
 
 ## File Transfers
 Use the CSCS globus online endpoint to transfer files. 
-* To run the example models, download the files of this repository to your local machine. 
-* Transfer the downloaded files (stan_example_PizDaint.ipynb, Redcard.csv, logistic0.stan and logistic1.stan) from your local machine to your scratch folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. See here for a documentation of Daint’s file system.
+* To run the example models, download the files Redcard.csv, logistic0.stan, and logistic1.stan of this repository to your local machine. 
+* Transfer the downloaded files from your local machine to your scratch folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. See here for a documentation of Daint’s file system.
 
 ## Model fitting
 You should now be able to fit models.
-* Execute the jupyter notebook “stan_example_PizDaint.ipynb”. This notebook fits two models one without, and one with within-chain parallelization. The estimation time of both models is displayed at the end to illustrate the performance gain of within-chain parallelization. The posterior samples of both models are stored as csv files in the scratch folder and can be post-processed with the designated functions of the cmdstanr package. If post-processing should be done based on rstan instead, the csv files can be combined to a stanfit object with the command “stanfit1 <- rstan::read_stan_csv(fit1$output_files())”.
+* Launch a new JupyterLab notebook using an R kernel by clicking on the plus symbol and selecting the R icon.
+* Copy the R code StanOnDaint.R of this repository in the first cell of the notebook. 
+* Execute the notebook. This notebook fits two models one without, and one with within-chain parallelization. The estimation time of both models is displayed at the end to illustrate the performance gain of within-chain parallelization. The posterior samples of both models are stored as csv files in the scratch folder and can be post-processed with the designated functions of the cmdstanr package. If post-processing should be done based on rstan instead, the csv files can be combined to a stanfit object with the command “stanfit1 <- rstan::read_stan_csv(fit1$output_files())”.
 * Finally, a good practice is to use chkptstanr to set checkpoints during the estimation.
 
 If you have comments, corrections or other feedback, feel free to contact me (fabian.dvorak[at]eawag.ch).
