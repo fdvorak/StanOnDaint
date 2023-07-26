@@ -1,5 +1,6 @@
 # A brief guide to fitting Bayesian models on Piz Daint (cscs.ch)
 Author: Fabian Dvorak (ESS, Eawag)
+
 Date: 2023-07-26
 
 This vignette describes Bayesian model fitting using R and Stan on Piz Daint, one of the supercomputers run by the Swiss National Supercomputing Centre. It shows how to (1) use JupyterLab to access PizDaint, and (2) use R and Stan to replicate this example.
