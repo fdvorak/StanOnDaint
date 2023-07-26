@@ -1,5 +1,5 @@
 ####################################################################################################
-# A brief guide to fitting Bayesian models on Piz Daint (cscs.ch)
+# A brief guide to fitting Stan models on Piz Daint
 # Fabian Dvorak, ESS, Eawag
 # 2023-07-26
 ####################################################################################################
