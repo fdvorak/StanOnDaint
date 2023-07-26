@@ -31,13 +31,14 @@ You should now be able to fit models.
 
 * Launch a new JupyterLab notebook using an R kernel by clicking on the plus symbol and selecting the R icon.
 
-* Copy the R code in StanOnDaint.R of this repository in the first cell of the notebook. 
+* Copy the R code in StanOnDaint.R of this repository into the first cell of the notebook. 
 
-* Execute the notebook. This notebook fits two models one without, and one with within-chain parallelization. The estimation time of both models is displayed at the end to illustrate the performance gain of within-chain parallelization. 
+* Execute the notebook. This notebook fits two models. One without, and one with within-chain parallelization. The estimation time of both models is displayed at the end to illustrate the performance gain. 
 
-* The posterior samples of both models are stored as csv files in the scratch folder and can be post-processed with the designated functions of the cmdstanr package. If post-processing should be done based on rstan instead, the csv files can be combined to a stanfit object with the command "stanfit1 <- rstan::read_stan_csv(fit1$output_files())".
+* The posterior samples of both models are stored as csv files in the scratch folder and can be post-processed with the designated functions of the cmdstanr package. When post-processing should be done based on rstan instead, the csv files can be combined to a stanfit object with the command "stanfit1 <- rstan::read_stan_csv(fit1$output_files())".
 
 * A good practice is to use [chkptstanr](https://donaldrwilliams.github.io/chkptstanr/) to set checkpoints during the estimation.
 
-Finally, put the following sentence in the acknowledgment section of your paper: "We acknowledge access to Piz Daint at the Swiss National Supercomputing Centre, Switzerland under Eawag’s share with
-the project ID em09." If you have comments, corrections or other feedback, feel free to contact me (fabian.dvorak[at]eawag.ch).
+Finally, put the following sentence in the acknowledgment section of your paper: "We acknowledge access to Piz Daint at the Swiss National Supercomputing Centre, Switzerland under Eawag’s share with the project ID em09." 
+
+If you have comments, corrections or other feedback, feel free to contact me (fabian.dvorak[at]eawag.ch).
