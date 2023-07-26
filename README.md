@@ -1,4 +1,4 @@
-# A brief guide to fitting Bayesian models on Piz Daint
+# A brief guide to fitting Stan models on Piz Daint
 Author: Fabian Dvorak (ESS, Eawag)
 
 Date: 2023-07-26
