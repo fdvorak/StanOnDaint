@@ -20,11 +20,11 @@ Before we can start fitting the models, we have to set up the R environment in J
 * Now you should be able to install all necessary R packages with the usual command (install.packages). I recommend using the R package [cmdstanr](https://mc-stan.org/cmdstanr/index.html) (instead of rstan) as Stan interface because it features within-chain parallelization. Within-chain parallelization is necessary to exploit the full potential of the supercomputer as one CPU node of Piz Daint gives you access to 72 cores. This means that, when estimating 4 parallel chains, you can use up to 68 cores for within-chain parallelization that would remain idle otherwise. Note that in order to use within-chain parallelization, you have to use the [reduce_sum](https://mc-stan.org/docs/functions-reference/functions-reduce.html) function in the definition of your model.
 
 ## File Transfers
-Use the [CSCS globus online endpoint](https://user.cscs.ch/storage/transfer/external/) to transfer files. 
+Use the [CSCS globus online endpoint](https://user.cscs.ch/storage/transfer/external/) to transfer files from your local machine to Piz Daint. 
 
-* To run the example models, download the files Redcard.csv, logistic0.stan, and logistic1.stan from [this repository](https://github.com/rmcelreath/cmdstan_map_rect_tutorial) to your local machine. 
+* To run the example models, download the data Redcard.csv from [this repository](https://github.com/rmcelreath/cmdstan_map_rect_tutorial). You also have to download the files logistic0.stan and logistic1.stan from the [StanOnDaint](https://github.com/fdvorak/StanOnDaint) repository to your local machine.  
 
-* Transfer the downloaded files from your local machine to your [scratch](https://user.cscs.ch/storage/file_systems/scratch/) folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. [Here](https://user.cscs.ch/storage/file_systems/scratch/) is the documentation of Daint's file system.
+* Transfer the data and the files logistic0.stan and logistic1.stan from your local machine to your [scratch](https://user.cscs.ch/storage/file_systems/scratch/) folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. [Here](https://user.cscs.ch/storage/file_systems/scratch/) is the documentation of Daint's file system.
 
 ## Model fitting
 You should now be able to fit models.
