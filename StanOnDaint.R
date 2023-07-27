@@ -13,15 +13,15 @@ redcard_data <- list(n_redcards = d2$redCards, n_games = d2$games, rating = d2$r
 redcard_data$N <- nrow(d2)
 
 # basic model without within-chain parallelization
-logistic0 <- cmdstan_model("./scratch/logistic0.stan")
+logistic0 <- cmdstan_model("./scratch/logistic.stan")
 time0 = system.time(fit0 <- logistic0$sample(redcard_data,
                                              chains = 4,
                                              parallel_chains = 4,
                                              refresh = 1000,
                                              output_dir = "./scratch/"))
 
-# model with within-chain parallelization (multiple threads per chain) 
-logistic1 <- cmdstan_model("./scratch/logistic1.stan", cpp_options = list(stan_threads = TRUE))
+# model with within-chain parallelization using reduce_sum (multiple threads per chain) 
+logistic1 <- cmdstan_model("./scratch/logistic_reduce_sum.stan", cpp_options = list(stan_threads = TRUE))
 redcard_data$grainsize <- 1
 time1 = system.time(fit1 <- logistic1$sample(redcard_data,
                                              chains = 4,
