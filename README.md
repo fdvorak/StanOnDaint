@@ -22,9 +22,9 @@ Before we can start fitting the models, we have to set up the R environment in J
 ## File Transfers
 Use the [CSCS globus online endpoint](https://user.cscs.ch/storage/transfer/external/) to transfer files from your local machine to Piz Daint. 
 
-* To run the example models, download the data Redcard.csv from [this repository](https://github.com/rmcelreath/cmdstan_map_rect_tutorial). You also have to download the files logistic0.stan and logistic1.stan from the [StanOnDaint](https://github.com/fdvorak/StanOnDaint) repository to your local machine.  
+* To run the example models, download the data Redcard.csv from [this repository](https://github.com/rmcelreath/cmdstan_map_rect_tutorial). You also have to download the files logistic.stan and logistic_reduce_sum.stan from the [StanOnDaint](https://github.com/fdvorak/StanOnDaint) repository to your local machine.  
 
-* Transfer the data and the files logistic0.stan and logistic1.stan from your local machine to your [scratch](https://user.cscs.ch/storage/file_systems/scratch/) folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. [Here](https://user.cscs.ch/storage/file_systems/scratch/) is the documentation of Daint's file system.
+* Transfer the data and the files logistic.stan and logistic_reduce_sum.stan from your local machine to your [scratch](https://user.cscs.ch/storage/file_systems/scratch/) folder (/scratch/snx3000/your username). Note that all files in scratch will be automatically deleted after 30 days! Use the project folder for permanent storage of valuable files. [Here](https://user.cscs.ch/storage/file_systems/scratch/) is the documentation of Daint's file system.
 
 ## Model fitting
 You should now be able to fit models.
