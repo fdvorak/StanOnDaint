@@ -29,7 +29,7 @@ Use the [CSCS globus online endpoint](https://user.cscs.ch/storage/transfer/exte
 ## Model fitting
 You should now be able to fit models.
 
-* Launch a new JupyterLab notebook using an R kernel by clicking on the plus symbol and selecting the R icon.
+* Navigate to your home directory and launch a new JupyterLab notebook with an R kernel by clicking on the plus symbol and selecting the R icon.
 
 * Copy the R code in StanOnDaint.R of this repository into the first cell of the notebook. 
 
