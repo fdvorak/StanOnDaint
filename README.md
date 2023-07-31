@@ -41,4 +41,4 @@ You should now be able to fit models.
 
 Finally, put the following sentence in the acknowledgment section of your paper: "We acknowledge access to Piz Daint at the Swiss National Supercomputing Centre, Switzerland under Eawag’s share with the project ID em09." 
 
-If you have comments, corrections or other feedback, feel free to contact me (fabian.dvorak[at]eawag.ch).
+If you have comments, corrections or other feedback, feel free to contact me.
